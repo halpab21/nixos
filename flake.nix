@@ -30,6 +30,7 @@
       };
     in
   {
+
     nixosConfigurations.medion = inputs.nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs system; };
 
@@ -38,7 +39,6 @@
           nix.settings.experimental-features = ["nix-command" "flakes"]; 
         }
         ./hosts/medion.nix
-        inputs.sops-nix.nixosModules.sops
       ];
     };
 

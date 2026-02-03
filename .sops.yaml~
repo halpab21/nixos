@@ -1,0 +1,5 @@
+creation_rules:
+  - path_regex: ./hosts/common/core/secrets/secrets.yaml
+    age: >-
+      age1dguddy4crktrglzg2szwlrjn82hcqj2dvp28j9t8wkhj9zrq8e8q6r5qft
+

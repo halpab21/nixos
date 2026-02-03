@@ -22,8 +22,8 @@
 
           "802-1x" = {
             eap = "peap";
-            identity = "";
-		    password = "";
+            identity = config.sops.secrets."school_wifi/patyo/identity".path;
+	    password = config.sops.secrets."school_wifi/patyo/password".path;
             phase2-auth = "mschapv2";
           };
 
