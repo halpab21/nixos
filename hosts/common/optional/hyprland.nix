@@ -3,7 +3,7 @@
   programs.hyprland.enable = true;
 
   environment.systemPackages = [
-    pkgs.kitty
+    pkgs.hyprlauncher
     pkgs.hyprshutdown
   ];
 }

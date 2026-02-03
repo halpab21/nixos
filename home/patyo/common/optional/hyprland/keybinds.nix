@@ -6,6 +6,7 @@
       [
         "$mod, RETURN, exec, kitty"
         "$mod, BACKSPACE, killactive,"
+        "$mod, SPACE, exec, hyprlauncher"
 	"CTRL SHIFT, ESCAPE, exec, hyprshutdown"
         "$mod, B, exec, zen"
         ",XF86MonBrightnessUp,exec,light -A 5"

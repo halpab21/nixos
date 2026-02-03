@@ -1,6 +1,11 @@
 {
 
   inputs = {
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-colors.url = "github:misterio77/nix-colors";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake/beta";
@@ -9,6 +14,7 @@
         home-manager.follows = "home-manager";
       };
     };
+
     home-manager = {
         url = "github:nix-community/home-manager";
         inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +38,7 @@
           nix.settings.experimental-features = ["nix-command" "flakes"]; 
         }
         ./hosts/medion.nix
+        inputs.sops-nix.nixosModules.sops
       ];
     };
 

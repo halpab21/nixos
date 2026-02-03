@@ -7,7 +7,8 @@
     ./packages.nix
     ./services.nix
     ./sops.nix
-    ./zsh.nix  
+    ./zsh.nix
+    ./pipewire.nix  
   ]; 
 
 

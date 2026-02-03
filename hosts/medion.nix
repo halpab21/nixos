@@ -8,7 +8,6 @@
     inputs.home-manager.nixosModules.home-manager
     ./common/optional/hyprland.nix
     ./common/optional/school-wifi.nix
-    ./common/optional/zen.nix
   ];
 
   home-manager = {
@@ -18,6 +17,7 @@
     };
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "bak";
   };
 
   networking.hostName = "medion";

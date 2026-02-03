@@ -2,9 +2,6 @@
 {
   networking.networkmanager = {
     ensureProfiles = {
-      environmentFiles = [
-        "/etc/nixos/wifi-secrets.env"
-      ];
 
       profiles = {
         school-wifi = {
@@ -25,8 +22,8 @@
 
           "802-1x" = {
             eap = "peap";
-            identity = "$WIFI_IDENTITY";
-            password = "$WIFI_PASSWORD";
+            identity = "";
+		    password = "";
             phase2-auth = "mschapv2";
           };
 

@@ -3,6 +3,7 @@
 {
   imports = [
     ./common/optional/hyprland.nix
+    ./common/optional/zen.nix
     ./common/core
   ];
 
@@ -13,6 +14,7 @@
 
   home.packages = [
     pkgs.jetbrains-toolbox
+    pkgs.discord-ptb
   ];
 
   home.file = {
