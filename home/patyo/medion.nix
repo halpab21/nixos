@@ -4,6 +4,8 @@
   imports = [
     ./common/optional/hyprland.nix
     ./common/optional/zen.nix
+    ./common/optional/ags.nix
+    ./common/optional/ai-desktop.nix
     ./common/core
   ];
 

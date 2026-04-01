@@ -1,7 +1,7 @@
 { config, pkgs, ...  }:
 let
-  accent = config.colorScheme.colors.base0D;
-  inactive = config.colorScheme.colors.base01;
+  accent = config.colorScheme.palette.base0D;
+  inactive = config.colorScheme.palette.base01;
 in
 {
   wayland.windowManager.hyprland.settings = {

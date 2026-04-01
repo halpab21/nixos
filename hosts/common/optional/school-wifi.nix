@@ -3,6 +3,11 @@
   networking.networkmanager = {
     ensureProfiles = {
 
+      environmentFiles = [
+        config.sops.secrets."school_wifi/patyo/identity".path
+        config.sops.secrets."school_wifi/patyo/password".path
+      ];
+
       profiles = {
         school-wifi = {
           connection = {
@@ -22,8 +27,8 @@
 
           "802-1x" = {
             eap = "peap";
-            identity = config.sops.secrets."school_wifi/patyo/identity".path;
-	    password = config.sops.secrets."school_wifi/patyo/password".path;
+            identity = "$IDENTITY";
+	    password = "$PASSWORD";
             phase2-auth = "mschapv2";
           };
 

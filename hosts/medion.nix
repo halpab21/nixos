@@ -8,6 +8,10 @@
     inputs.home-manager.nixosModules.home-manager
     ./common/optional/hyprland.nix
     ./common/optional/school-wifi.nix
+    ./common/optional/winapps.nix
+    ./common/optional/obsidian.nix
+    ./common/optional/steam.nix
+    ./common/optional/ai-desktop.nix
   ];
 
   home-manager = {
@@ -18,6 +22,10 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "bak";
+  };
+
+  environment.variables = {
+    SOPS_AGE_KEY_FILE = "/etc/sops/age/keys.txt";
   };
 
   networking.hostName = "medion";

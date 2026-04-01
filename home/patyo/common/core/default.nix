@@ -4,6 +4,7 @@
     ./git.nix
     ./nix-colors.nix
     ./fonts.nix
+    ./zsh.nix
   ];
 
 }

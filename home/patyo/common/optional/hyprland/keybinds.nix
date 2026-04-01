@@ -14,6 +14,8 @@
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ",XF86MonBrightnessUp,exec,light -A 5"
         ",XF86MonBrightnessDown,exec,light -U 5"
+	"$mod, F, togglefloating"
+	"$mod SHIFT, S, exec, grim -g \"$(slurp)\" - | wl-copy"
       ]
       ++ (
         builtins.concatLists (builtins.genList (i:
@@ -25,5 +27,10 @@
          )
          9)
      );
+
+    bindm = [
+      "$mod, mouse:272, movewindow"      # SUPER + Left Click = Move window
+      "$mod, mouse:273, resizewindow"    # SUPER + Right Click = Resize window
+    ];
   };
 }

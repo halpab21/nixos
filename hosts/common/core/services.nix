@@ -6,6 +6,9 @@
       PasswordAuthentication = true;
     };
   };
+
+  services.displayManager.gdm.enable = true;
+  services.displayManager.gdm.wayland = true;
   
   services.xserver.xkb = {
     layout = "at";
@@ -13,5 +16,7 @@
   };
 
   networking.networkmanager.enable = true;
+
+  services.flatpak.enable = true;
 
 }

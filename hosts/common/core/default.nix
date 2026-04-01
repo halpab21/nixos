@@ -8,7 +8,9 @@
     ./services.nix
     ./sops.nix
     ./zsh.nix
-    ./pipewire.nix  
+    ./pipewire.nix
+    ./docker.nix
+    ./notify.nix  
   ]; 
 
 

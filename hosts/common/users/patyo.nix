@@ -1,11 +1,13 @@
 { config, pkgs, ... }:
 {
+  programs.zsh.enable = true;
 
   users.users.patyo = {
     isNormalUser = true;
-    description = "Patrik main user";
-    extraGroups = [ "networkmanager" "wheel" "video" ];
+    description = "patyo";
+    extraGroups = [ "docker" "networkmanager" "wheel" "video" ];
     packages= with pkgs; [];
+    shell = pkgs.zsh;
   };
 
 }

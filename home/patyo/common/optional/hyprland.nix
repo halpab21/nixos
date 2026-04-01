@@ -1,9 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./hyprland/keybinds.nix
-    ./hyprland/general.nix
-    ./hyprland/decoration.nix
+    ./hyprland
   ];
 
   wayland.windowManager.hyprland.enable = true;
